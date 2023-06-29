@@ -4,7 +4,7 @@ import { Home } from './pages/Home/Home'
 import { NotFound } from './pages/notFound/NotFound'
 import { ProfesionalList } from './pages/profesionalList/ProfesionalList'
 import { ProfesionalPre } from './pages/profesionalPre/ProfesionalPre'
-import { Register } from './pages/Register/Register'
+import { Register } from './pages/register/Register'
 import { Login } from './pages/login/Login'
 
 

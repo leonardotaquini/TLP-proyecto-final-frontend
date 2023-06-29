@@ -11,11 +11,11 @@ export const ProfesionalList = () => {
     <>
         <main className='vh-100 contenedor-list'>
             <Navbar/>
-            <section className='d-flex flex-column flex-sm-row flex-lg-row lista-profesionales bg-white'>
+            <section className='d-flex flex-column flex-sm-column flex-lg-row lista-profesionales bg-white'>
                 <div className=' col-12 col-sm-3 col-lg-3'>
                     <LeftFilter/>
                 </div>
-                <div className='shadow col-12 col-sm-7 col-lg-6'>
+                <div className='shadow col-12 col-sm-7 col-lg-6 m-auto'>
                     <SearchBar/>
                     <div>
                         <ProfesionalCard/>
