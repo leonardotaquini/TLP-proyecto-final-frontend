@@ -1,0 +1,10 @@
+.lista-profesionales{
+    min-height: 90vh;
+}
+.contenedor-list{
+    background-image:
+    url("../../img/fondo1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

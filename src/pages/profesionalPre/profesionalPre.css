@@ -1,0 +1,11 @@
+.contenedor-pre{
+    background-image:
+    url("../../img/fondo1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.titulo-pre{
+    text-shadow: 1px 1px 1px black;
+}

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav{
+    background-color: rgba(20, 19, 17, 0.795);
+    min-height:10vh!important ;
+}
+
+.btn-hamburguesa {
+    border: none !important;
+  }
+
+  .icono-hmbr{
+    color: rgb(165, 155, 155);
+  }
+
+.btn-hamburguesa:focus {
+    border: none !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+  }
