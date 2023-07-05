@@ -24,4 +24,8 @@ export const profesionalAxios = {
         const { data } = await axios.delete(`${ URL }/${ id }`);
         return data;
     },
+    login: async(user) => {
+        const { data } = await axios.post(`${URL}/login`, user);
+        return data;
+    }
 }

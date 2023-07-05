@@ -10,7 +10,6 @@ import { ProfesionalState } from './context/profesional/ProfesionalState'
 import { Dashboard } from './pages/dashboardProfesional/Dashboard'
 
 
-
 function App() {
 
   return (
