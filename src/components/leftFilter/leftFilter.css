@@ -1,5 +1,7 @@
 .contenedor-left{
     min-height: 100vh;
+   
+    
 }
 
 @media (max-width:980px ) {

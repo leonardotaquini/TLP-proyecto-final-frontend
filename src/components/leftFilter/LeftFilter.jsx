@@ -1,5 +1,6 @@
 import React from 'react';
 import './leftFilter.css';
+import { Link } from 'react-router-dom';
 
 export const LeftFilter = () => {
   return (
@@ -7,25 +8,25 @@ export const LeftFilter = () => {
         <div className='contenedor-left d-flex flex-column justify-content-center'>
             <div className='d-flex flex-column w-100 mx-5'>
             <h4 className='fw-bold  my-4'>Ordenar</h4>
-                <p className='text-muted'>Mejores puntuados</p>
-                <p className='text-muted'>Mas cercanos</p>
-                <p className='text-muted'>Mayor cantidad de trabajos</p>
+                <Link  className='text-muted small text-decoration-none my-2'>Mejores puntuados</Link>
+                <Link className='text-muted small text-decoration-none my-2'>Mas cercanos</Link>
+                <Link className='text-muted small text-decoration-none my-2'>Mayor cantidad de trabajos</Link>
             </div>
             <div className='d-flex flex-column w-100 mx-5'>
             <h4 className='fw-bold my-4'>Filtros</h4>
-                <p className='text-muted'>Plomería</p>
-                <p className='text-muted'>Electricidad</p>
-                <p className='text-muted'>Pintor</p>
-                <p className='text-muted'>Albañilería</p>
-                <p className='text-muted'>Gas</p>
-                <p className='text-muted'>Carpintería</p>      
-                <p className='text-muted'>Herrería</p>
-                <p className='text-muted'>Fumigación</p>
-                <p className='text-muted'>Reparación de PC</p>
-                <p className='text-muted'>Reparación de Electrodomesticos</p>
-                <p className='text-muted'>Reparación de Celulares</p>
-                <p className='text-muted'>Cerrajería</p>
-                <p className='text-muted'>Tapicería</p>
+                <Link className='text-muted small text-decoration-none my-2'>Plomería</Link>
+                <Link className='text-muted small text-decoration-none my-2'>Electricidad</Link>
+                <Link className='text-muted small text-decoration-none my-2'>Pintor</Link>
+                <Link className='text-muted small text-decoration-none my-2'>Albañilería</Link>
+                <Link className='text-muted small text-decoration-none my-2'>Gas</Link>
+                <Link className='text-muted small text-decoration-none my-2'>Carpintería</Link>      
+                <Link className='text-muted small text-decoration-none my-2'>Herrería</Link>
+                <Link className='text-muted small text-decoration-none my-2'>Fumigación</Link>
+                <Link className='text-muted small text-decoration-none my-2'>Reparación de PC</Link>
+                <Link className='text-muted small text-decoration-none my-2'>Reparación de Electrodomesticos</Link>
+                <Link className='text-muted small text-decoration-none my-2'>Reparación de Celulares</Link>
+                <Link className='text-muted small text-decoration-none my-2'>Cerrajería</Link>
+                <Link className='text-muted small text-decoration-none my-2'>Tapicería</Link>
             </div>
         </div>
     </>

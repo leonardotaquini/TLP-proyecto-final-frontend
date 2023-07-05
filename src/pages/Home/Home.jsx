@@ -28,7 +28,7 @@ export const Home = () => {
                         deleteSpeed={50}
                         words={oficios}/>
                 </span>
-                <Link to='/profesionales' className="text-decoration none btn btn-warning  fw-bold">Explorar</Link>
+                <Link to='/profesionales' className="text-decoration none btn btn-primary  fw-bold">Explorar</Link>
                 </Fade>
             </section>
 

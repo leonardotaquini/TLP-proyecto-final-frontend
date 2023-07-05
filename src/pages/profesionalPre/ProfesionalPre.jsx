@@ -13,8 +13,8 @@ export const ProfesionalPre = () => {
             <Fade left cascade>
                 <h1 className='text-white fw-bold mb-5 titulo-pre text-center'>Impulsa tus ventas y atrae mas clientes!</h1>
             <div className='d-flex'>
-                <Link to='/registro' className='btn btn-warning mx-3 fw-bold '>Registrarme</Link>
-                <Link to='/login' className='btn btn-warning mx-3 fw-bold '>Inciar Sesion</Link>
+                <Link to='/registro' className='btn btn-primary mx-3 fw-bold '>Registrarme</Link>
+                <Link to='/login' className='btn btn-primary mx-3 fw-bold '>Inciar Sesion</Link>
             </div>
             </Fade>
         </div>

@@ -9,6 +9,8 @@
 .nav{
     background-color: rgba(20, 19, 17, 0.795);
     min-height:10vh!important ;
+    display: flex;
+    justify-content: space-between;
 }
 
 .btn-hamburguesa {
