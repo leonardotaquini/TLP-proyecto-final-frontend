@@ -4,8 +4,29 @@ import { Navbar } from '../../components/navbar/Navbar';
 import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { profesionalAxios } from '../../helpers/profesionalAxios';
+import swal from 'sweetalert';
 
 export const Login = () => {
+
+  const mostrarError = (msg) => {
+    swal({
+      title: "Error",
+      text: msg,
+      icon: "error",
+      buttons: true,
+      timer: 3000
+    });
+  };
+
+  const bienvenida = () => {
+    swal({
+      title: "Exito",
+      text: 'Bienvenido a Arreglos Ya',
+      icon: "success",
+      buttons: true,
+      timer: 3000
+    });
+  };
 
   const navigate = useNavigate();
 
@@ -16,11 +37,15 @@ export const Login = () => {
 
   const onSubmit = async(user) => {
     try{
-      const token = await profesionalAxios.login(user);
+      const {token} = await profesionalAxios.login(user);
+      window.localStorage.setItem('token', token);
       reset();
+      bienvenida();
+      navigate('/profesionales')
     }catch(err){
       const {message} = err.response.data;
-      
+      reset();
+      mostrarError(message);      
     }
   }
 
