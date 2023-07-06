@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './login.css';
 import { Navbar } from '../../components/navbar/Navbar';
 import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { profesionalAxios } from '../../helpers/profesionalAxios';
 import swal from 'sweetalert';
+import { ProfesionalContext } from '../../context/profesional/ProfesionalContext';
 
 export const Login = () => {
+
+  const {setInSession} = useContext(ProfesionalContext);
 
   const mostrarError = (msg) => {
     swal({
@@ -39,6 +42,7 @@ export const Login = () => {
     try{
       const {token} = await profesionalAxios.login(user);
       window.localStorage.setItem('token', token);
+      setInSession();
       reset();
       bienvenida();
       navigate('/profesionales')

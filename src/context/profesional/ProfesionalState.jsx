@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { profesionalReducer } from './ProfesionalReducer';
 import { TYPES } from '../types';
 import { profesionalAxios } from '../../helpers/profesionalAxios';
+import jwt from 'jwt-decode';
 
 export const ProfesionalState = ({ children }) => {
 
@@ -15,6 +16,8 @@ export const ProfesionalState = ({ children }) => {
     const initialState = {
         profesionals: [],
         isLoading: true,
+        inSession: false,
+        user: null
     }
 
     //Defino el use reducer.
@@ -25,7 +28,16 @@ export const ProfesionalState = ({ children }) => {
 
     useEffect(() => {
         getProfesionals();
-    }, [profesionalesList])
+    }, [profesionalesList]);
+
+    //Obtengo el token y guardo en el estado los datos del usuario.
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+        if(token){
+            state.user = jwt(token);
+            state.inSession = true;
+        }
+    }, [state.inSession]);
     
 
     //Funciones:
@@ -48,12 +60,26 @@ export const ProfesionalState = ({ children }) => {
         navigate('/login');
     }
 
+    const logout = () => {
+        localStorage.removeItem('token');
+        state.inSession = false;
+        navigate('/login');
+    }
+
+    const setInSession = (valor) => {
+        state.inSession = valor;
+    }
+
   return (
     <ProfesionalContext.Provider value={{
         profesionals: state.profesionals,
         isLoading: state.isLoading,
         getProfesionals,
-        addProfesional
+        addProfesional,
+        inSession: state.inSession,
+        user: state.user,
+        logout,
+        setInSession
     }}>
         {children}
     </ProfesionalContext.Provider>

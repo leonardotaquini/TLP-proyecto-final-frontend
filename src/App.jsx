@@ -8,6 +8,8 @@ import { Register } from './pages/register/Register'
 import { Login } from './pages/login/Login'
 import { ProfesionalState } from './context/profesional/ProfesionalState'
 import { Dashboard } from './pages/dashboardProfesional/Dashboard'
+import ProtectedRoute from './components/router/ProtectedRoute'
+import { Profile } from './pages/profile/Profile'
 
 
 function App() {
@@ -22,7 +24,12 @@ function App() {
               <Route path='/soyprofesional' element={ <ProfesionalPre/> } />
               <Route path='/registro' element={ <Register/> } />
               <Route path='/login' element={ <Login/> } />
-              <Route path='/dashboard' element={ <Dashboard/> } />
+              <Route element={ <ProtectedRoute/>}>
+                <Route path='/dashboard' element={ <Dashboard/> } />
+              </Route>
+              <Route element={ <ProtectedRoute/>}>
+                <Route path='/perfil' element={ <Profile/> } />
+              </Route>
               <Route path='*' element={ <NotFound/> } />
             </Routes>
         </ProfesionalState>
